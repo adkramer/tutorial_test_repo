@@ -1,7 +1,4 @@
-h1 a {
-    color: #69B7D4;
-    font-family: 'Poppins', sans-serif;
-}
+
 
 body {
     padding-left: 15px;
@@ -29,6 +26,7 @@ h1, h2, h3, h4 {
 
 .date {
     color: #33F5FF;
+    float: right;
 }
 
 .save {
@@ -52,9 +50,15 @@ h1, h2, h3, h4 {
 
 .post h1 a, .post h1 a:visited {
     color: #2A96BD;
+
 }
 
 .post p {
     color: #204553;
     font-family: 'Dosis', sans-serif;
+}
+
+/* BUTTONS */
+.btn{
+    height:30px;
 }
