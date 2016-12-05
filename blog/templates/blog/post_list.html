@@ -1,13 +1,19 @@
 {% extends 'blog/base.html' %}
+{% load blog_extras %}
 
 {% block content %}
     {% for post in posts %}
         <div class="post">
             <div class="date">
-                <p>Published: {{ post.published_date }}</p>
+                {{ post.published_date }}
             </div>
            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
            <p>{{ post.text|linebreaksbr }}</p>
+           <a href="{% url 'post_detail' pk=post.pk %}">Comments: <span class="badge badge-default">{{ post.approved_comments.count }}</span> 
+           {% if user.is_authenticated and post.unapproved_comments.count > 0 %}
+           <span class="badge badge-danger">Unapproved: {{ post.unapproved_comments.count }}</span>
+           {% endif %}
+           </a>
         </div>
     {% endfor %}
 {% endblock %}

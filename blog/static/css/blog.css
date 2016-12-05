@@ -25,7 +25,7 @@ h1, h2, h3, h4 {
 }
 
 .date {
-    color: #33F5FF;
+    color: #69B7D4;
     float: right;
 }
 
@@ -61,4 +61,23 @@ h1, h2, h3, h4 {
 /* BUTTONS */
 .btn{
     height:30px;
+}
+
+/* COMMENTS */
+
+.comment {
+    margin: 20px 0px 20px 20px;
+   
+}
+
+
+.badge-danger {
+    background-color: #b94a48;
+}
+
+.badge-notify{
+   background:red;
+   position:relative;
+   top: 0px;
+   left: -20px;
 }
